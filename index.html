@@ -849,6 +849,16 @@
       </div>
     </div>
 
+    <!-- Lightbox Structure -->
+    <div class="lightbox" id="gallery-lightbox">
+        <div class="lightbox-content">
+            <img src="" alt="Gallery Image" class="lightbox-image">
+            <button class="lightbox-nav lightbox-prev" aria-label="Previous">❮</button>
+            <button class="lightbox-nav lightbox-next" aria-label="Next">❯</button>
+            <button class="lightbox-close" aria-label="Close">×</button>
+        </div>
+    </div>
+
     <script>
       // Function to open the modal
       function openModal(eventId) {
@@ -1107,39 +1117,12 @@
             </div>
           `;
           
-          // Lightbox functionality
           galleryItem.addEventListener('click', function() {
-            const lightbox = document.createElement('div');
-            lightbox.className = 'lightbox-modal';
-            
-            lightbox.innerHTML = `
-              <div class="lightbox-content">
-                <img src="./assets/Kalajna 2024/${filename}" alt="Gallery Image" />
-                <div class="lightbox-close">&times;</div>
-              </div>
-            `;
-            
-            document.body.appendChild(lightbox);
-            lightbox.offsetHeight;
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImg = lightbox.querySelector('.lightbox-image');
+            lightboxImg.src = `./assets/Kalajna 2024/${filename}`;
             lightbox.classList.add('active');
-            
-            const closeModal = () => {
-              lightbox.classList.remove('active');
-              setTimeout(() => lightbox.remove(), 300);
-            };
-            
-            lightbox.querySelector('.lightbox-close').addEventListener('click', closeModal);
-            lightbox.addEventListener('click', function(e) {
-              if (e.target === lightbox) {
-                closeModal();
-              }
-            });
-            
-            document.addEventListener('keydown', function(e) {
-              if (e.key === 'Escape') {
-                closeModal();
-              }
-            });
+            document.body.classList.add('lightbox-open');
           });
           
           galleryMosaic.appendChild(galleryItem);
@@ -1164,6 +1147,101 @@
 
         // Initialize gallery with all images
         createGalleryItems('all');
+      });
+
+      // Lightbox functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('gallery-lightbox');
+        const lightboxImg = lightbox.querySelector('.lightbox-image');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+        const prevBtn = lightbox.querySelector('.lightbox-prev');
+        const nextBtn = lightbox.querySelector('.lightbox-next');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        let currentIndex = 0;
+        const images = Array.from(galleryItems).map(item => 
+            item.querySelector('img').getAttribute('src')
+        );
+
+        function showImage(index) {
+            currentIndex = index;
+            lightboxImg.src = images[currentIndex];
+        }
+
+        function openLightbox(index) {
+            showImage(index);
+            lightbox.classList.add('active');
+            document.body.classList.add('lightbox-open');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.classList.remove('lightbox-open');
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Event Listeners for lightbox
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                openLightbox(index);
+            });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        prevBtn.addEventListener('click', showPrev);
+        nextBtn.addEventListener('click', showNext);
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            switch(e.key) {
+                case 'Escape':
+                    closeLightbox();
+                    break;
+                case 'ArrowLeft':
+                    showPrev();
+                    break;
+                case 'ArrowRight':
+                    showNext();
+                    break;
+            }
+        });
+
+        // Mobile menu toggle functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+
+        // Add click handlers for all nav links
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {  // Only on mobile
+                    nav.classList.remove('active');
+                }
+            });
+        });
+
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
       });
     </script>
   </body>
