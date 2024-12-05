@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KALAJNA - Your destination for the best events and registrations."
+    />
+    <meta
+      name="keywords"
+      content="Kalajna, events, registration, gallery, contact"
+    />
+    <title>Kalajna</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS Library -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Styles (Ensure it's loaded after Tailwind) -->
+    <link rel="stylesheet" href="./styles/styles.css?v=1.0" />
+  </head>
+
+  <body class="bg-gray-900 font-sans">
+    <!-- Navbar -->
+    <header class="bg-black px-6 py-4 shadow-md">
+      <div class="flex justify-between items-center container mx-auto">
+        <div class="text-2xl font-semibold headerbrand text-white">KALAJNA</div>
+        <nav class="hidden md:flex gap-8 items-center text-lg">
+          <a
+            href="#home"
+            class="text-white hover:text-blue-400 transition-colors duration-300"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-white hover:text-blue-400 transition-colors duration-300"
+            >About Us</a
+          >
+          <a
+            href="#events"
+            class="text-white hover:text-blue-400 transition-colors duration-300"
+            >Events</a
+          >
+          <a
+            href="#rules"
+            class="text-white hover:text-blue-400 transition-colors duration-300"
+            >Rules</a
+          >
+          <a
+            href="#registration"
+            class="text-white hover:text-blue-400 transition-colors duration-300"
+            >Registration</a
+          >
+          <a
+            href="#contact"
+            class="text-white hover:text-blue-400 transition-colors duration-300"
+            >Contact Us</a
+          >
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button
+          id="menu-toggle"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden flex-col gap-4 mt-4 w-full bg-black/95 backdrop-blur-sm"
+      >
+        <a
+          href="#home"
+          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
+          >About Us</a
+        >
+        <a
+          href="#events"
+          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
+          >Events</a
+        >
+        <a
+          href="#rules"
+          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
+          >Rules</a
+        >
+        <a
+          href="#registration"
+          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
+          >Registration</a
+        >
+        <a
+          href="#contact"
+          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
+          >Contact Us</a
+        >
+      </div>
+    </header>
+
+    <!-- Main Content with Video Background -->
+    <main>
+      <!-- Hero Section with Countdown Timer -->
+      <section
+        id="home"
+        class="relative min-h-screen flex items-center justify-center overflow-hidden"
+      >
+        <!-- Video Background -->
+        <div class="video-background">
+          <video autoplay muted loop playsinline>
+            <source src="./assets/Kalanja_New.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- Overlay -->
+        <div class="video-overlay"></div>
+
+        <!-- Repositioned Scroll Indicator -->
+        <div class="scroll-indicator">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
+          </svg>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="relative py-16"
+        style="
+          background-image: url('./assets/Kalajna 2024/IMG_1310.JPG');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      >
+        <!-- Enhanced overlay for better content visibility -->
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/80"
+        ></div>
+
+        <!-- Content Wrapper with backdrop-filter -->
+        <div class="relative container mx-auto px-6 md:px-12 lg:px-20">
+          <div
+            class="flex flex-col md:flex-row items-center gap-12 backdrop-blur-sm bg-black/30 p-8 rounded-xl"
+          >
+            <!-- Text Content -->
+            <div
+              class="md:w-1/2 order-2 md:order-1 text-center md:text-left"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+            >
+              <h2 class="text-4xl font-bold text-white leading-tight">
+                About <span class="text-blue-600">KALAJNA</span>
+              </h2>
+              <p class="text-white mt-6 text-lg leading-relaxed">
+                At <strong>KALAJNA</strong>, we aim to bring creativity, energy,
+                and excitement to your world. Our events are designed to
+                inspire, connect, and celebrate. Whether you're here for the fun
+                or the inspiration, you'll find something extraordinary in
+                everything we do.
+              </p>
+              <p class="text-white mt-4 text-lg">
+                With a legacy of excellence, we provide world-class experiences
+                that leave lasting memories. Let's create something
+                unforgettable together!
+              </p>
+            </div>
+
+            <!-- Image with Animation -->
+            <div
+              class="md:w-1/2 order-1 md:order-2"
+              data-aos="zoom-in"
+              data-aos-duration="1800"
+              data-aos-delay="300"
+              data-aos-easing="ease-in-out"
+            >
+              <img
+                src="./assets/Kalajna 2024/IMG_9702.JPG"
+                alt="About Kalajna"
+                class="w-full max-w-lg mx-auto md:mx-0 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="events"
+        class="relative py-16"
+        style="
+          background-image: url('./assets/Kalajna 2024/IMG_9125.JPG');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      >
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/80"
+        ></div>
+
+        <div class="container relative mx-auto px-6 md:px-12 lg:px-20">
+          <div class="text-center mb-12" data-aos="fade-right">
+            <h2 class="text-4xl font-bold text-white leading-tight">
+              Upcoming <span class="text-blue-600">Events</span>
+            </h2>
+            <p class="text-gray-300 mt-4 text-lg">
+              Explore our spectacular events crafted to inspire, entertain, and
+              bring us all together.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div
+              class="event-card bg-white/95 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Dance Event"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  Rhythmic Rendezvous
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A spectacular dance celebration featuring Western and Indian
+                  styles, where self-expression, cultural heritage, and
+                  high-energy performances come alive.
+                </p>
+                <button
+                  class="mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(1)"
+                >
+                  Know More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="event-card bg-white/95 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Music Event"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  Harmony Extravaganza
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A musical celebration that brings together diverse vocal and
+                  instrumental performances, blending Indian and Western styles
+                  into an unforgettable auditory experience.
+                </p>
+                <button
+                  class="mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(2)"
+                >
+                  Know More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="event-card bg-white/95 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Drama Event"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  Epic Drama Dazzle
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A captivating theatrical showcase that blends powerful
+                  performances of street plays, mime, and monoacts, bringing
+                  forth raw emotion, activism, and storytelling to the stage.
+                </p>
+                <button
+                  class="mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(3)"
+                >
+                  Know More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="event-card bg-white/95 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Fine Arts Event"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800">Fine Arts</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A celebration of creativity and artistic expression, featuring
+                  intricate mandalas, vibrant paintings, and imaginative designs
+                  that transform ordinary spaces into works of art.
+                </p>
+                <button
+                  class="mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(4)"
+                >
+                  Know More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="event-card bg-white/95 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Literary Event"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  Lexicon Gala
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  A celebration of linguistic creativity, where poets,
+                  wordsmiths, and literary enthusiasts come together to express
+                  themselves through the art of language.
+                </p>
+                <button
+                  class="mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(5)"
+                >
+                  Know More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="event-card bg-white/95 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Quiz Event"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800">Quiz</h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  Engage in a battle of wits across various domains like
+                  science, history, economics, entertainment, and current
+                  affairs. Test your knowledge and challenge your intellectual
+                  limits.
+                </p>
+                <button
+                  class="mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(6)"
+                >
+                  Know More
+                </button>
+              </div>
+            </div>
+
+            <div
+              class="event-card bg-white/95 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden"
+              data-aos="fade-up"
+            >
+              <img
+                src="./assets/eventlogos/samplelogo.png"
+                alt="Fun Events"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-2xl font-semibold text-gray-800">
+                  More Fun Events
+                </h3>
+                <p class="text-gray-600 text-sm mt-2">
+                  Compete in Antakshari, showcase intellect in Debate, get
+                  creative with Cooking Without Fire, take on challenges in
+                  Roadies, shine in the Spotlight, and flaunt your style in Ramp
+                  Walk!
+                </p>
+                <button
+                  class="mt-4 bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                  onclick="openModal(7)"
+                >
+                  Know More
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            id="modal-overlay-1"
+            class="modal-overlay fixed inset-0 bg-black/80 flex justify-center items-center hidden z-50"
+          >
+            <div
+              class="modal-content bg-white rounded-xl p-8 relative mx-4"
+              style="
+                width: 90%;
+                max-width: 1400px;
+                max-height: 90vh;
+                overflow-y: auto;
+              "
+            >
+              <!-- Modal Header -->
+              <div class="modal-header border-b pb-4 mb-6">
+                <h2 class="text-5xl text-center font-bold text-gray-800 mb-2">
+                  Rhythmic Rendezvous
+                </h2>
+                <p class="text-center text-gray-500 text-xl">
+                  Dance Competition
+                </p>
+                <!-- Close Button -->
+                <button
+                  class="close-modal absolute top-4 right-4 cursor-pointer hover:bg-gray-100 rounded-full p-2 transition-all"
+                  onclick="closeModal(1)"
+                >
+                  <svg
+                    class="w-6 h-6 text-gray-600 hover:text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Modal Body -->
+              <div
+                class="modal-body flex flex-col lg:flex-row items-start lg:space-x-12"
+              >
+                <!-- Event Poster -->
+                <div class="lg:w-1/2">
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Rhythmic Rendezvous Poster"
+                    class="w-full rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 object-cover"
+                    style="max-height: 70vh"
+                  />
+                </div>
+
+                <!-- Event Details -->
+                <div class="lg:w-1/2 mt-8 lg:mt-0">
+                  <!-- Description -->
+                  <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">
+                      About the Event
+                    </h3>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                      A spectacular dance celebration featuring Western and
+                      Indian styles, where self-expression, cultural heritage,
+                      and high-energy performances come alive on stage.
+                    </p>
+                  </div>
+
+                  <!-- Rules -->
+                  <div class="space-y-8">
+                    <div>
+                      <h3 class="text-2xl font-semibold text-gray-800 mb-3">
+                        Rules and Guidelines
+                      </h3>
+                      <ul
+                        class="list-disc list-inside text-gray-600 text-lg space-y-2"
+                      >
+                        <li>Time limit: 5-7 minutes per performance</li>
+                        <li>Team size: Maximum 8 members</li>
+                        <li>Both solo and group performances allowed</li>
+                        <li>Music should be submitted in advance</li>
+                        <li>Props are allowed but must be approved</li>
+                      </ul>
+                    </div>
+
+                    <!-- Additional Info -->
+                    <div>
+                      <h3 class="text-2xl font-semibold text-gray-800 mb-3">
+                        Event Details
+                      </h3>
+                      <div class="grid grid-cols-2 gap-4 text-lg">
+                        <div>
+                          <p class="font-medium text-gray-700">Date:</p>
+                          <p class="text-gray-600">March 15, 2024</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-gray-700">Time:</p>
+                          <p class="text-gray-600">2:00 PM onwards</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-gray-700">Venue:</p>
+                          <p class="text-gray-600">Main Auditorium</p>
+                        </div>
+                        <div>
+                          <p class="font-medium text-gray-700">Prize Pool:</p>
+                          <p class="text-gray-600">₹25,000</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Registration Button -->
+                  <div class="mt-12">
+                    <button
+                      class="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-8 py-4 rounded-xl text-xl font-bold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-blue-500/30"
+                      onclick="goToRegisterAndClose()"
+                    >
+                      Register Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="modal-overlay-2" class="modal-overlay">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="text-3xl font-semibold text-gray-800">
+                  Harmony Extravaganza
+                </h2>
+                <span class="close-modal" onclick="closeModal(2)">×</span>
+              </div>
+              <div class="modal-body mt-4">
+                <img
+                  src="./assets/eventlogos/samplelogo.png"
+                  alt="Music Event"
+                  class="w-48 h-48 rounded-full mx-auto mb-4"
+                />
+                <p class="text-gray-600">
+                  A musical celebration that brings together diverse vocal and
+                  instrumental performances, blending Indian and Western styles
+                  into an unforgettable auditory experience.
+                </p>
+                <div class="mt-4">
+                  <h3 class="font-semibold text-gray-800">Event Details:</h3>
+                  <ul class="list-disc list-inside text-gray-600 mt-2">
+                    <li>Date: TBA</li>
+                    <li>Venue: Main Auditorium</li>
+                    <li>Team Size: Solo/Group</li>
+                    <li>Duration: 4-6 minutes</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer mt-6 text-right">
+                <button
+                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                  onclick="goToRegisterAndClose()"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="modal-overlay-3" class="modal-overlay">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="text-3xl font-semibold text-gray-800">
+                  Epic Drama Dazzle
+                </h2>
+                <span class="close-modal" onclick="closeModal(3)">×</span>
+              </div>
+              <div class="modal-body mt-4">
+                <img
+                  src="./assets/eventlogos/samplelogo.png"
+                  alt="Drama Event"
+                  class="w-48 h-48 rounded-full mx-auto mb-4"
+                />
+                <p class="text-gray-600">
+                  A captivating theatrical showcase that blends powerful
+                  performances of street plays, mime, and monoacts, bringing
+                  forth raw emotion, activism, and storytelling to the stage.
+                </p>
+                <div class="mt-4">
+                  <h3 class="font-semibold text-gray-800">Event Details:</h3>
+                  <ul class="list-disc list-inside text-gray-600 mt-2">
+                    <li>Date: TBA</li>
+                    <li>Venue: Open Air Theatre</li>
+                    <li>Team Size: Varies by category</li>
+                    <li>Duration: 8-10 minutes</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer mt-6 text-right">
+                <button
+                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                  onclick="goToRegisterAndClose()"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="modal-overlay-4" class="modal-overlay">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="text-3xl font-semibold text-gray-800">Fine Arts</h2>
+                <span class="close-modal" onclick="closeModal(4)">×</span>
+              </div>
+              <div class="modal-body mt-4">
+                <img
+                  src="./assets/eventlogos/samplelogo.png"
+                  alt="Fine Arts Event"
+                  class="w-48 h-48 rounded-full mx-auto mb-4"
+                />
+                <p class="text-gray-600">
+                  A celebration of creativity and artistic expression, featuring
+                  intricate mandalas, vibrant paintings, and imaginative designs
+                  that transform ordinary spaces into works of art.
+                </p>
+                <div class="mt-4">
+                  <h3 class="font-semibold text-gray-800">Categories:</h3>
+                  <ul class="list-disc list-inside text-gray-600 mt-2">
+                    <li>Mandala Art</li>
+                    <li>Face Painting</li>
+                    <li>Rangoli</li>
+                    <li>Creative Art</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer mt-6 text-right">
+                <button
+                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                  onclick="goToRegisterAndClose()"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="modal-overlay-5" class="modal-overlay">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="text-3xl font-semibold text-gray-800">
+                  Lexicon Gala
+                </h2>
+                <span class="close-modal" onclick="closeModal(5)">×</span>
+              </div>
+              <div class="modal-body mt-4">
+                <img
+                  src="./assets/eventlogos/samplelogo.png"
+                  alt="Literary Event"
+                  class="w-48 h-48 rounded-full mx-auto mb-4"
+                />
+                <p class="text-gray-600">
+                  A celebration of linguistic creativity, where poets,
+                  wordsmiths, and literary enthusiasts come together to express
+                  themselves through the art of language.
+                </p>
+                <div class="mt-4">
+                  <h3 class="font-semibold text-gray-800">Categories:</h3>
+                  <ul class="list-disc list-inside text-gray-600 mt-2">
+                    <li>Poetry</li>
+                    <li>Creative Writing</li>
+                    <li>Storytelling</li>
+                    <li>Essay Writing</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer mt-6 text-right">
+                <button
+                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                  onclick="goToRegisterAndClose()"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="modal-overlay-6" class="modal-overlay">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="text-3xl font-semibold text-gray-800">Quiz</h2>
+                <span class="close-modal" onclick="closeModal(6)">×</span>
+              </div>
+              <div class="modal-body mt-4">
+                <img
+                  src="./assets/eventlogos/samplelogo.png"
+                  alt="Quiz Event"
+                  class="w-48 h-48 rounded-full mx-auto mb-4"
+                />
+                <p class="text-gray-600">
+                  Engage in a battle of wits across various domains like
+                  science, history, economics, entertainment, and current
+                  affairs. Test your knowledge and challenge your intellectual
+                  limits.
+                </p>
+                <div class="mt-4">
+                  <h3 class="font-semibold text-gray-800">Event Details:</h3>
+                  <ul class="list-disc list-inside text-gray-600 mt-2">
+                    <li>Team Size: 2-3 members</li>
+                    <li>Multiple rounds</li>
+                    <li>Diverse topics</li>
+                    <li>Exciting prizes</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer mt-6 text-right">
+                <button
+                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                  onclick="goToRegisterAndClose()"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="modal-overlay-7" class="modal-overlay">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2 class="text-3xl font-semibold text-gray-800">
+                  More Fun Events
+                </h2>
+                <span class="close-modal" onclick="closeModal(7)">×</span>
+              </div>
+              <div class="modal-body mt-4">
+                <img
+                  src="./assets/eventlogos/samplelogo.png"
+                  alt="Fun Events"
+                  class="w-48 h-48 rounded-full mx-auto mb-4"
+                />
+                <p class="text-gray-600">
+                  A collection of exciting events to showcase various talents
+                  and have fun!
+                </p>
+                <div class="mt-4">
+                  <h3 class="font-semibold text-gray-800">Events Include:</h3>
+                  <ul class="list-disc list-inside text-gray-600 mt-2">
+                    <li>Antakshari</li>
+                    <li>Debate</li>
+                    <li>Cooking Without Fire</li>
+                    <li>Roadies</li>
+                    <li>Spotlight</li>
+                    <li>Ramp Walk</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer mt-6 text-right">
+                <button
+                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
+                  onclick="goToRegisterAndClose()"
+                >
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="rules"
+        class="relative py-16"
+        style="
+          background-image: url('./assets/Kalajna 2024/IMG_9125.JPG');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        "
+      >
+        <!-- Add overlay div for better text readability -->
+        <div class="absolute inset-0 bg-black/70"></div>
+
+        <!-- Content wrapper with relative positioning -->
+        <div class="relative container mx-auto px-6 md:px-12 lg:px-20">
+          <div class="text-center md:text-left">
+            <h2 class="text-4xl font-bold text-white leading-tight">
+              <span class="text-blue-600">Rules</span> & Regulations
+            </h2>
+            <p class="text-white mt-4 text-lg leading-relaxed">
+              Please read the rules and regulations carefully before registering
+              for the event. Violation of any rule may lead to disqualification.
+            </p>
+          </div>
+
+          <!-- Rules List -->
+          <div
+            class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
+          >
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Institute Participation
+              </h3>
+              <p class="text-gray-600 mt-4">
+                The original permission letter from the participating institute
+                along with the copy of government issued identity cards should
+                be submitted at the registration desk before the commencement of
+                the fest.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Event Registration
+              </h3>
+              <p class="text-gray-600 mt-4">
+                A participant can register for a maximum of three events.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Disqualification
+              </h3>
+              <p class="text-gray-600 mt-4">
+                The college will not be eligible for the overall championship if
+                their team has been disqualified from any event.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Event Submissions
+              </h3>
+              <p class="text-gray-600 mt-4">
+                Submission of any information related to events (e.g., music,
+                photographs) must be provided in a pen drive before the event
+                commences.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Reporting Time
+              </h3>
+              <p class="text-gray-600 mt-4">
+                All participants must report at the venue at least one hour
+                prior to the commencement of the event.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Alcohol and Substance Use
+              </h3>
+              <p class="text-gray-600 mt-4">
+                Consumption of alcohol, narcotics, and other illegal substances
+                anywhere on campus is strictly prohibited.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Organizers' Rights
+              </h3>
+              <p class="text-gray-600 mt-4">
+                Organizers hold the right to change event rules before the event
+                begins without prior notice.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">
+                Responsibility
+              </h3>
+              <p class="text-gray-600 mt-4">
+                Organizers are not responsible for any loss or damage to
+                participants' personal belongings.
+              </p>
+            </div>
+            <div class="rule-card bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-semibold text-gray-800">Violation</h3>
+              <p class="text-gray-600 mt-4">
+                Any participant found violating the rules may be immediately
+                expelled from the campus and disqualified from all events.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6 lg:px-20">
+        <!-- Footer top section with copyright -->
+        <div class="text-center mb-8">
+          <p class="text-lg font-medium text-gray-400">
+            &copy; 2024 KALAJNA. All rights reserved.
+          </p>
+        </div>
+
+        <!-- Footer bottom section with contact details -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <!-- Faculty Coordinator Section -->
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-4">
+              Faculty Coordinator
+            </h3>
+            <p class="text-lg text-gray-300 mb-2">Mr. Prashant Nayak</p>
+            <p class="text-gray-400 mb-2">+91 96635 58247</p>
+            <p class="text-gray-400">
+              <a
+                href="https://www.kalajna.co.in"
+                class="text-blue-400 hover:underline"
+                >www.kalajna.co.in</a
+              >
+            </p>
+            <p class="text-gray-400 mt-2">
+              NGSM Institute of Pharmaceutical Sciences
+            </p>
+            <p class="text-gray-400">
+              NITTE DU, Paneer Campus, Deralakatte, Mangaluru-575 018
+            </p>
+          </div>
+
+          <!-- Student Coordinator 1 Section -->
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-4">
+              Student Coordinator
+            </h3>
+            <p class="text-lg text-gray-300 mb-2">Ms. Sheavon Serrao</p>
+            <p class="text-gray-400 mb-2">+91 7795072421</p>
+          </div>
+
+          <!-- Student Coordinator 2 Section -->
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-semibold text-blue-600 mb-4">
+              Student Coordinator
+            </h3>
+            <p class="text-lg text-gray-300 mb-2">Mr. Keith D’Cunha</p>
+            <p class="text-gray-400 mb-2">+91 7204149203</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom bar with address and additional space -->
+      <div class="bg-gray-800 py-4 mt-8 text-center">
+        <p class="text-sm text-gray-400">
+          NGSM Institute of Pharmaceutical Sciences, NITTE DU, Paneer Campus,
+          Deralakatte, Mangaluru-575 018
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Function to open the modal
+      function openModal(eventId) {
+        const modalOverlay = document.getElementById(
+          `modal-overlay-${eventId}`
+        );
+        if (modalOverlay) {
+          modalOverlay.style.display = "flex";
+          document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+        }
+      }
+
+      // Function to close the modal
+      function closeModal(eventId) {
+        const modalOverlay = document.getElementById(
+          `modal-overlay-${eventId}`
+        );
+        if (modalOverlay) {
+          modalOverlay.style.display = "none";
+          document.body.style.overflow = "auto"; // Re-enable scrolling
+        }
+      }
+
+      // Close modal when clicking outside
+      window.onclick = function (event) {
+        if (event.target.classList.contains("modal")) {
+          event.target.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      };
+
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: false,
+        mirror: true,
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Countdown Timer
+        const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+        const countdownFunction = setInterval(function () {
+          const now = new Date().getTime();
+          const distance = countDownDate - now;
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+
+          if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").classList.add("hidden");
+            document.getElementById("expired").classList.remove("hidden");
+          }
+        }, 1000);
+
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        window.addEventListener("scroll", function () {
+          const footer = document.querySelector("footer");
+          const countdownContainer = document.getElementById(
+            "countdown-container"
+          );
+
+          const footerPosition = footer.getBoundingClientRect().top;
+
+          // If the footer is in view, hide the timer by adding 'timerhide' class
+          if (footerPosition <= window.innerHeight) {
+            countdownContainer.classList.add("timerhide");
+          }
+        });
+
+        // Add an event listener to the menu toggle button
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+
+      function goToRegisterAndClose() {
+        // Navigate to registration section
+        document
+          .getElementById("registration")
+          .scrollIntoView({ behavior: "smooth" });
+        // Close all modals
+        document.querySelectorAll(".modal-overlay").forEach((modal) => {
+          modal.style.display = "none";
+        });
+        document.body.style.overflow = "auto";
+      }
+
+      // Countdown Timer Script
+      const countdown = document.getElementById("countdown");
+      const eventDate = new Date("2023-12-31T23:59:59").getTime(); // Set your event date here
+
+      const updateCountdown = () => {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+        if (distance < 0) {
+          clearInterval(interval);
+          countdown.innerHTML = "Event Started!";
+        }
+      };
+
+      const interval = setInterval(updateCountdown, 1000);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector("header");
+        const mobileMenuButton = document.querySelector(".mobile-menu-button");
+        const nav = document.querySelector("nav");
+        const scrollProgress = document.createElement("div");
+        scrollProgress.className = "scroll-progress";
+        header.appendChild(scrollProgress);
+
+        // Mobile menu toggle
+        mobileMenuButton.addEventListener("click", function () {
+          nav.classList.toggle("active");
+          document.body.classList.toggle("no-scroll");
+        });
+
+        // Close menu when clicking a link
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            nav.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+          });
+        });
+
+        // Handle scroll events
+        window.addEventListener("scroll", () => {
+          // Add shadow on scroll
+          if (window.scrollY > 0) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+
+          // Update scroll progress
+          const winScroll =
+            document.body.scrollTop || document.documentElement.scrollTop;
+          const height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+          const scrolled = (winScroll / height) * 100;
+          scrollProgress.style.width = scrolled + "%";
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest("header")) {
+            nav.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

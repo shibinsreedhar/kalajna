@@ -1,0 +1,629 @@
+/* Base Styles */
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #1e40af;
+  --text-color: #1f2937;
+  --background-color: #f9fafb;
+}
+
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Loading Animation */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Header & Navigation Styles */
+header {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+  padding: 16px 24px !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand Logo */
+.headerbrand {
+  font-family: "Teko", sans-serif !important;
+  color: #ffffff !important;
+  font-size: 32px !important;
+  text-decoration: underline;
+  position: relative;
+  z-index: 52;
+}
+
+/* Desktop Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+nav a {
+  font-family: "Montserrat", sans-serif !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+  position: relative;
+}
+
+nav a:hover {
+  color: #60a5fa !important;
+}
+
+/* Desktop Hover Effect */
+@media (min-width: 769px) {
+  nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #60a5fa;
+    transition: width 0.3s ease;
+  }
+
+  nav a:hover::after {
+    width: 100%;
+  }
+}
+
+/* Mobile Menu Button */
+.mobile-menu-button {
+  display: none;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 52;
+}
+
+.mobile-menu-button svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.98);
+    padding: 80px 2rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    z-index: 51;
+    animation: fadeIn 0.3s ease;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 18px !important;
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  nav.active a {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+  }
+
+  /* Stagger animation for nav items */
+  nav.active a:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  nav.active a:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  nav.active a:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  nav.active a:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  nav.active a:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  nav.active a:nth-child(6) {
+    transition-delay: 0.6s;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #60a5fa, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+/* Header Shadow on Scroll */
+header.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Event Cards */
+.event-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.event-card img {
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.close-modal {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+  color: #ff4444;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 16px;
+    width: 95%;
+  }
+
+  .event-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 99;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+}
+
+/* Focus Styles */
+:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .modal-overlay,
+  .back-to-top {
+    display: none !important;
+  }
+}
+
+/* Remove the previous after pseudo-element and animations */
+.nav-link::after {
+  display: none;
+}
+
+/* Remove focus outline styles for navigation links */
+nav a:focus {
+  outline: none;
+}
+
+/* Optional: Add a subtle opacity change on click */
+nav a:active {
+  opacity: 0.8;
+}
+
+/* Reset any potential interfering styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add these styles for video background */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
+  filter: brightness(1.05);
+}
+
+/* Overlay for better text visibility */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+/* Content styling */
+.content-wrapper {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+}
+
+/* Updated scroll indicator positioning */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+/* Enhanced bounce animation */
+.scroll-indicator svg {
+  width: 32px;
+  height: 32px;
+  color: rgba(255, 255, 255, 0.9);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* About Section Styling */
+#about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%),
+    url("./assets/texture.png");
+  background-size: cover, contain;
+  background-blend-mode: overlay;
+  padding: 80px 0;
+}
+
+/* Enhanced gradient overlay */
+#about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* Content container refinements */
+#about .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Glass effect container refinements */
+#about .flex {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  gap: 48px;
+}
+
+/* Text content refinements */
+#about .text-white {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+#about p:last-child {
+  margin-bottom: 0;
+}
+
+/* Image container refinements */
+#about .md\:w-1\/2 {
+  padding: 10px;
+}
+
+#about img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  animation: float 6s ease-in-out infinite;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+#about img:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive refinements */
+@media (max-width: 768px) {
+  #about {
+    padding: 60px 0;
+  }
+
+  #about .flex {
+    padding: 30px;
+    gap: 32px;
+  }
+
+  #about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #about p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  #about .md\:w-1\/2 {
+    padding: 0;
+  }
+}
