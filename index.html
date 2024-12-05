@@ -387,29 +387,30 @@
             class="modal-overlay fixed inset-0 bg-black/80 flex justify-center items-center hidden z-50"
           >
             <div
-              class="modal-content bg-white rounded-xl p-8 relative mx-4"
-              style="
-                width: 90%;
-                max-width: 1400px;
-                max-height: 90vh;
-                overflow-y: auto;
-              "
+              class="modal-content bg-white rounded-xl p-0 relative flex flex-col"
+              style="width: 90%; max-width: 1200px; max-height: 90vh; overflow-y: auto;"
             >
               <!-- Modal Header -->
-              <div class="modal-header border-b pb-4 mb-6">
-                <h2 class="text-5xl text-center font-bold text-gray-800 mb-2">
-                  Rhythmic Rendezvous
-                </h2>
-                <p class="text-center text-gray-500 text-xl">
-                  Dance Competition
-                </p>
+              <div
+                class="modal-header border-b py-3 px-4 flex items-center justify-between bg-gray-100"
+              >
+                <div
+                  class="flex flex-col items-center text-center w-full lg:w-auto"
+                >
+                  <h2 class="text-xl lg:text-2xl font-bold text-gray-800">
+                    Rhythmic Rendezvous
+                  </h2>
+                  <p class="text-sm lg:text-base text-gray-500">
+                    Dance Competition
+                  </p>
+                </div>
                 <!-- Close Button -->
                 <button
-                  class="close-modal absolute top-4 right-4 cursor-pointer hover:bg-gray-100 rounded-full p-2 transition-all"
+                  class="close-modal cursor-pointer hover:bg-gray-200 rounded-full p-1 transition-all"
                   onclick="closeModal(1)"
                 >
                   <svg
-                    class="w-6 h-6 text-gray-600 hover:text-red-600"
+                    class="w-5 h-5 text-gray-600 hover:text-red-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -425,27 +426,30 @@
               </div>
 
               <!-- Modal Body -->
-              <div
-                class="modal-body flex flex-col lg:flex-row items-start lg:space-x-12"
-              >
+              <div class="modal-body flex flex-col lg:flex-row items-start">
                 <!-- Event Poster -->
-                <div class="lg:w-1/2">
+                <div
+                  class="w-full lg:w-1/3 flex justify-center items-center bg-gray-50 p-4"
+                >
                   <img
                     src="./assets/eventlogos/samplelogo.png"
                     alt="Rhythmic Rendezvous Poster"
-                    class="w-full rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300 object-cover"
-                    style="max-height: 70vh"
+                    class="w-full max-h-[40vh] lg:max-h-full object-contain"
                   />
                 </div>
 
                 <!-- Event Details -->
-                <div class="lg:w-1/2 mt-8 lg:mt-0">
+                <div class="w-full lg:w-2/3 p-4 lg:p-6 flex flex-col space-y-4">
                   <!-- Description -->
                   <div>
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
                       About the Event
                     </h3>
-                    <p class="text-gray-600 text-lg leading-relaxed">
+                    <p
+                      class="text-sm lg:text-base text-gray-600 leading-relaxed"
+                    >
                       A spectacular dance celebration featuring Western and
                       Indian styles, where self-expression, cultural heritage,
                       and high-energy performances come alive on stage.
@@ -453,52 +457,56 @@
                   </div>
 
                   <!-- Rules -->
-                  <div class="space-y-8">
-                    <div>
-                      <h3 class="text-2xl font-semibold text-gray-800 mb-3">
-                        Rules and Guidelines
-                      </h3>
-                      <ul
-                        class="list-disc list-inside text-gray-600 text-lg space-y-2"
-                      >
-                        <li>Time limit: 5-7 minutes per performance</li>
-                        <li>Team size: Maximum 8 members</li>
-                        <li>Both solo and group performances allowed</li>
-                        <li>Music should be submitted in advance</li>
-                        <li>Props are allowed but must be approved</li>
-                      </ul>
-                    </div>
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      Rules and Guidelines
+                    </h3>
+                    <ul
+                      class="list-disc list-inside text-sm lg:text-base text-gray-600 space-y-1"
+                    >
+                      <li>Time limit: 5-7 minutes per performance</li>
+                      <li>Team size: Maximum 8 members</li>
+                      <li>Both solo and group performances allowed</li>
+                      <li>Music should be submitted in advance</li>
+                      <li>Props are allowed but must be approved</li>
+                    </ul>
+                  </div>
 
-                    <!-- Additional Info -->
-                    <div>
-                      <h3 class="text-2xl font-semibold text-gray-800 mb-3">
-                        Event Details
-                      </h3>
-                      <div class="grid grid-cols-2 gap-4 text-lg">
-                        <div>
-                          <p class="font-medium text-gray-700">Date:</p>
-                          <p class="text-gray-600">March 15, 2024</p>
-                        </div>
-                        <div>
-                          <p class="font-medium text-gray-700">Time:</p>
-                          <p class="text-gray-600">2:00 PM onwards</p>
-                        </div>
-                        <div>
-                          <p class="font-medium text-gray-700">Venue:</p>
-                          <p class="text-gray-600">Main Auditorium</p>
-                        </div>
-                        <div>
-                          <p class="font-medium text-gray-700">Prize Pool:</p>
-                          <p class="text-gray-600">₹25,000</p>
-                        </div>
+                  <!-- Event Details -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      Event Details
+                    </h3>
+                    <div
+                      class="grid grid-cols-2 gap-2 lg:gap-4 text-sm lg:text-base"
+                    >
+                      <div>
+                        <p class="font-medium text-gray-700">Date:</p>
+                        <p class="text-gray-600">March 15, 2024</p>
+                      </div>
+                      <div>
+                        <p class="font-medium text-gray-700">Time:</p>
+                        <p class="text-gray-600">2:00 PM onwards</p>
+                      </div>
+                      <div>
+                        <p class="font-medium text-gray-700">Venue:</p>
+                        <p class="text-gray-600">Main Auditorium</p>
+                      </div>
+                      <div>
+                        <p class="font-medium text-gray-700">Prize Pool:</p>
+                        <p class="text-gray-600">₹25,000</p>
                       </div>
                     </div>
                   </div>
 
                   <!-- Registration Button -->
-                  <div class="mt-12">
+                  <div class="mt-auto">
                     <button
-                      class="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-8 py-4 rounded-xl text-xl font-bold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-blue-500/30"
+                      class="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-6 py-3 rounded-lg text-sm font-bold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-blue-500/30"
                       onclick="goToRegisterAndClose()"
                     >
                       Register Now
@@ -509,9 +517,641 @@
             </div>
           </div>
 
-      
-          
-      
+          <div
+            id="modal-overlay-2"
+            class="modal-overlay fixed inset-0 bg-black/80 flex justify-center items-center hidden z-50"
+          >
+            <div
+              class="modal-content bg-white rounded-xl p-0 relative flex flex-col"
+              style="width: 90%; max-width: 1200px; max-height: 90vh; overflow-y: auto;"
+            >
+              <!-- Modal Header -->
+              <div
+                class="modal-header border-b py-3 px-4 flex items-center justify-between bg-gray-100"
+              >
+                <div
+                  class="flex flex-col items-center text-center w-full lg:w-auto"
+                >
+                  <h2 class="text-xl lg:text-2xl font-bold text-gray-800">
+                    Harmony Extravaganza
+                  </h2>
+                  <p class="text-sm lg:text-base text-gray-500">Music Event</p>
+                </div>
+                <button
+                  class="close-modal cursor-pointer hover:bg-gray-200 rounded-full p-1 transition-all"
+                  onclick="closeModal(2)"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-600 hover:text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body flex flex-col lg:flex-row items-start">
+                <!-- Event Poster -->
+                <div
+                  class="w-full lg:w-1/3 flex justify-center items-center bg-gray-50 p-4"
+                >
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Harmony Extravaganza Poster"
+                    class="w-full max-h-[40vh] lg:max-h-full object-contain"
+                  />
+                </div>
+
+                <!-- Event Details -->
+                <div class="w-full lg:w-2/3 p-4 lg:p-6 flex flex-col space-y-4">
+                  <!-- Description -->
+                  <div>
+                    <p
+                      class="text-sm lg:text-base text-gray-600 leading-relaxed"
+                    >
+                      A musical celebration that brings together diverse vocal
+                      and instrumental performances, blending Indian and Western
+                      styles into an unforgettable auditory experience.
+                    </p>
+                  </div>
+
+                  <!-- Event Details -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      Event Details
+                    </h3>
+                    <ul
+                      class="list-disc list-inside text-sm lg:text-base text-gray-600 space-y-1"
+                    >
+                      <li>Date: TBA</li>
+                      <li>Venue: Main Auditorium</li>
+                      <li>Team Size: Solo/Group</li>
+                      <li>Duration: 4-6 minutes</li>
+                    </ul>
+                  </div>
+
+                  <!-- Registration Button -->
+                  <div class="mt-auto">
+                    <button
+                      class="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-6 py-3 rounded-lg text-sm font-bold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-blue-500/30"
+                      onclick="goToRegisterAndClose()"
+                    >
+                      Register Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="modal-overlay-3"
+            class="modal-overlay fixed inset-0 bg-black/80 flex justify-center items-center hidden z-50"
+          >
+            <div
+              class="modal-content bg-white rounded-xl p-0 relative flex flex-col"
+              style="width: 90%; max-width: 1200px; max-height: 90vh; overflow-y: auto;"
+            >
+              <!-- Modal Header -->
+              <div
+                class="modal-header border-b py-3 px-4 flex items-center justify-between bg-gray-100"
+              >
+                <div
+                  class="flex flex-col items-center text-center w-full lg:w-auto"
+                >
+                  <h2 class="text-xl lg:text-2xl font-bold text-gray-800">
+                    Epic Drama Dazzle
+                  </h2>
+                  <p class="text-sm lg:text-base text-gray-500">Drama Event</p>
+                </div>
+                <!-- Close Button -->
+                <button
+                  class="close-modal cursor-pointer hover:bg-gray-200 rounded-full p-1 transition-all"
+                  onclick="closeModal(3)"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-600 hover:text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body flex flex-col lg:flex-row items-start">
+                <!-- Event Poster -->
+                <div
+                  class="w-full lg:w-1/3 flex justify-center items-center bg-gray-50 p-4"
+                >
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Drama Event"
+                    class="w-full max-h-[40vh] lg:max-h-full object-contain"
+                  />
+                </div>
+
+                <!-- Event Details -->
+                <div class="w-full lg:w-2/3 p-4 lg:p-6 flex flex-col space-y-4">
+                  <!-- Description -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      About the Event
+                    </h3>
+                    <p
+                      class="text-sm lg:text-base text-gray-600 leading-relaxed"
+                    >
+                      A captivating theatrical showcase that blends powerful
+                      performances of street plays, mime, and monoacts, bringing
+                      forth raw emotion, activism, and storytelling to the
+                      stage.
+                    </p>
+                  </div>
+
+                  <!-- Event Details -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      Event Details
+                    </h3>
+                    <div
+                      class="grid grid-cols-2 gap-2 lg:gap-4 text-sm lg:text-base"
+                    >
+                      <div>
+                        <p class="font-medium text-gray-700">Date:</p>
+                        <p class="text-gray-600">TBA</p>
+                      </div>
+                      <div>
+                        <p class="font-medium text-gray-700">Venue:</p>
+                        <p class="text-gray-600">Open Air Theatre</p>
+                      </div>
+                      <div>
+                        <p class="font-medium text-gray-700">Team Size:</p>
+                        <p class="text-gray-600">Varies by category</p>
+                      </div>
+                      <div>
+                        <p class="font-medium text-gray-700">Duration:</p>
+                        <p class="text-gray-600">8-10 minutes</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Registration Button -->
+                  <div class="mt-auto">
+                    <button
+                      class="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-6 py-3 rounded-lg text-sm font-bold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-blue-500/30"
+                      onclick="goToRegisterAndClose()"
+                    >
+                      Register Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="modal-overlay-4"
+            class="modal-overlay fixed inset-0 bg-black/80 flex justify-center items-center hidden z-50"
+          >
+            <div
+              class="modal-content bg-white rounded-xl p-0 relative flex flex-col"
+              style="width: 90%; max-width: 1200px; max-height: 90vh; overflow-y: auto;"
+            >
+              <!-- Modal Header -->
+              <div
+                class="modal-header border-b py-3 px-4 flex items-center justify-between bg-gray-100"
+              >
+                <div
+                  class="flex flex-col items-center text-center w-full lg:w-auto"
+                >
+                  <h2 class="text-xl lg:text-2xl font-bold text-gray-800">
+                    Fine Arts
+                  </h2>
+                  <p class="text-sm lg:text-base text-gray-500">
+                    Artistic Expression Event
+                  </p>
+                </div>
+                <!-- Close Button -->
+                <button
+                  class="close-modal cursor-pointer hover:bg-gray-200 rounded-full p-1 transition-all"
+                  onclick="closeModal(4)"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-600 hover:text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body flex flex-col lg:flex-row items-start">
+                <!-- Event Poster -->
+                <div
+                  class="w-full lg:w-1/3 flex justify-center items-center bg-gray-50 p-4"
+                >
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Fine Arts Event"
+                    class="w-full max-h-[40vh] lg:max-h-full object-contain"
+                  />
+                </div>
+
+                <!-- Event Details -->
+                <div class="w-full lg:w-2/3 p-4 lg:p-6 flex flex-col space-y-4">
+                  <!-- Description -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      About the Event
+                    </h3>
+                    <p
+                      class="text-sm lg:text-base text-gray-600 leading-relaxed"
+                    >
+                      A celebration of creativity and artistic expression,
+                      featuring intricate mandalas, vibrant paintings, and
+                      imaginative designs that transform ordinary spaces into
+                      works of art.
+                    </p>
+                  </div>
+
+                  <!-- Categories -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      Categories
+                    </h3>
+                    <ul
+                      class="list-disc list-inside text-sm lg:text-base text-gray-600 space-y-1"
+                    >
+                      <li>Mandala Art</li>
+                      <li>Face Painting</li>
+                      <li>Rangoli</li>
+                      <li>Creative Art</li>
+                    </ul>
+                  </div>
+
+                  <!-- Registration Button -->
+                  <div class="mt-auto">
+                    <button
+                      class="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-6 py-3 rounded-lg text-sm font-bold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-blue-500/30"
+                      onclick="goToRegisterAndClose()"
+                    >
+                      Register Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="modal-overlay-5"
+            class="modal-overlay fixed inset-0 bg-black/80 flex justify-center items-center hidden z-50"
+          >
+            <div
+              class="modal-content bg-white rounded-xl p-0 relative flex flex-col"
+              style="width: 90%; max-width: 1200px; max-height: 90vh; overflow-y: auto;" 
+            >
+              <!-- Modal Header -->
+              <div
+                class="modal-header border-b py-3 px-4 flex items-center justify-between bg-gray-100"
+              >
+                <div
+                  class="flex flex-col items-center text-center w-full lg:w-auto"
+                >
+                  <h2 class="text-xl lg:text-2xl font-bold text-gray-800">
+                    Lexicon Gala
+                  </h2>
+                  <p class="text-sm lg:text-base text-gray-500">
+                    Literary Event
+                  </p>
+                </div>
+                <!-- Close Button -->
+                <button
+                  class="close-modal cursor-pointer hover:bg-gray-200 rounded-full p-1 transition-all"
+                  onclick="closeModal(5)"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-600 hover:text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body flex flex-col lg:flex-row items-start">
+                <!-- Event Poster -->
+                <div
+                  class="w-full lg:w-1/3 flex justify-center items-center bg-gray-50 p-4"
+                >
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Lexicon Gala Poster"
+                    class="w-full max-h-[40vh] lg:max-h-full object-contain"
+                  />
+                </div>
+
+                <!-- Event Details -->
+                <div class="w-full lg:w-2/3 p-4 lg:p-6 flex flex-col space-y-4">
+                  <!-- Description -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      About the Event
+                    </h3>
+                    <p
+                      class="text-sm lg:text-base text-gray-600 leading-relaxed"
+                    >
+                      A celebration of linguistic creativity, where poets,
+                      wordsmiths, and literary enthusiasts come together to
+                      express themselves through the art of language.
+                    </p>
+                  </div>
+
+                  <!-- Categories -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      Categories
+                    </h3>
+                    <ul
+                      class="list-disc list-inside text-sm lg:text-base text-gray-600 space-y-1"
+                    >
+                      <li>Poetry</li>
+                      <li>Creative Writing</li>
+                      <li>Storytelling</li>
+                      <li>Essay Writing</li>
+                    </ul>
+                  </div>
+
+                  <!-- Registration Button -->
+                  <div class="mt-auto">
+                    <button
+                      class="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-6 py-3 rounded-lg text-sm font-bold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-blue-500/30"
+                      onclick="goToRegisterAndClose()"
+                    >
+                      Register Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="modal-overlay-6"
+            class="modal-overlay fixed inset-0 bg-black/80 flex justify-center items-center hidden z-50"
+          >
+            <div
+              class="modal-content bg-white rounded-xl p-0 relative flex flex-col"
+              style="width: 90%; max-width: 1200px; max-height: 90vh; overflow-y: auto;"
+            >
+              <!-- Modal Header -->
+              <div
+                class="modal-header border-b py-3 px-4 flex items-center justify-between bg-gray-100"
+              >
+                <div
+                  class="flex flex-col items-center text-center w-full lg:w-auto"
+                >
+                  <h2 class="text-xl lg:text-2xl font-bold text-gray-800">
+                    Quiz
+                  </h2>
+                  <p class="text-sm lg:text-base text-gray-500">
+                    Trivia Challenge
+                  </p>
+                </div>
+                <!-- Close Button -->
+                <button
+                  class="close-modal cursor-pointer hover:bg-gray-200 rounded-full p-1 transition-all"
+                  onclick="closeModal(6)"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-600 hover:text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body flex flex-col lg:flex-row items-start">
+                <!-- Event Poster -->
+                <div
+                  class="w-full lg:w-1/3 flex justify-center items-center bg-gray-50 p-4"
+                >
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Quiz Event Poster"
+                    class="w-full max-h-[40vh] lg:max-h-full object-contain"
+                  />
+                </div>
+
+                <!-- Event Details -->
+                <div class="w-full lg:w-2/3 p-4 lg:p-6 flex flex-col space-y-4">
+                  <!-- Description -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      About the Event
+                    </h3>
+                    <p
+                      class="text-sm lg:text-base text-gray-600 leading-relaxed"
+                    >
+                      Engage in a battle of wits across various domains like
+                      science, history, economics, entertainment, and current
+                      affairs. Test your knowledge and challenge your
+                      intellectual limits.
+                    </p>
+                  </div>
+
+                  <!-- Event Details -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      Event Details
+                    </h3>
+                    <ul
+                      class="list-disc list-inside text-sm lg:text-base text-gray-600 space-y-1"
+                    >
+                      <li>Team Size: 2-3 members</li>
+                      <li>Multiple rounds</li>
+                      <li>Diverse topics</li>
+                      <li>Exciting prizes</li>
+                    </ul>
+                  </div>
+
+                  <!-- Registration Button -->
+                  <div class="mt-auto">
+                    <button
+                      class="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-6 py-3 rounded-lg text-sm font-bold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-blue-500/30"
+                      onclick="goToRegisterAndClose()"
+                    >
+                      Register Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="modal-overlay-7"
+            class="modal-overlay fixed inset-0 bg-black/80 flex justify-center items-center hidden z-50"
+          >
+            <div
+              class="modal-content bg-white rounded-xl p-0 relative flex flex-col"
+              style="width: 90%; max-width: 1200px; max-height: 90vh; overflow-y: auto;" 
+            >
+              <!-- Modal Header -->
+              <div
+                class="modal-header border-b py-3 px-4 flex items-center justify-between bg-gray-100"
+              >
+                <div
+                  class="flex flex-col items-center text-center w-full lg:w-auto"
+                >
+                  <h2 class="text-xl lg:text-2xl font-bold text-gray-800">
+                    More Fun Events
+                  </h2>
+                  <p class="text-sm lg:text-base text-gray-500">
+                    Exciting Challenges
+                  </p>
+                </div>
+                <!-- Close Button -->
+                <button
+                  class="close-modal cursor-pointer hover:bg-gray-200 rounded-full p-1 transition-all"
+                  onclick="closeModal(7)"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-600 hover:text-red-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body flex flex-col lg:flex-row items-start">
+                <!-- Event Poster -->
+                <div
+                  class="w-full lg:w-1/3 flex justify-center items-center bg-gray-50 p-4"
+                >
+                  <img
+                    src="./assets/eventlogos/samplelogo.png"
+                    alt="Fun Events Poster"
+                    class="w-full max-h-[40vh] lg:max-h-full object-contain"
+                  />
+                </div>
+
+                <!-- Event Details -->
+                <div class="w-full lg:w-2/3 p-4 lg:p-6 flex flex-col space-y-4">
+                  <!-- Description -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      About the Event
+                    </h3>
+                    <p
+                      class="text-sm lg:text-base text-gray-600 leading-relaxed"
+                    >
+                      Get ready for an assortment of quirky challenges,
+                      including treasure hunts, casual games, and fun quizzes
+                      that will keep you entertained throughout the event.
+                    </p>
+                  </div>
+
+                  <!-- Categories -->
+                  <div>
+                    <h3
+                      class="text-base lg:text-lg font-semibold text-gray-800 mb-2"
+                    >
+                      Categories
+                    </h3>
+                    <ul
+                      class="list-disc list-inside text-sm lg:text-base text-gray-600 space-y-1"
+                    >
+                      <li>Treasure Hunt</li>
+                      <li>Casual Games</li>
+                      <li>Brain Teasers</li>
+                      <li>Team Challenges</li>
+                    </ul>
+                  </div>
+
+                  <!-- Registration Button -->
+                  <div class="mt-auto">
+                    <button
+                      class="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white px-6 py-3 rounded-lg text-sm font-bold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out hover:shadow-blue-500/30"
+                      onclick="goToRegisterAndClose()"
+                    >
+                      Register Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section
@@ -655,8 +1295,8 @@
           <div class="flex justify-center gap-4 mb-8 flex-wrap">
             <button class="gallery-filter-btn active">All Photos</button>
             <button class="gallery-filter-btn">Cultural</button>
-            <button class="gallery-filter-btn">Technical</button>
-            <button class="gallery-filter-btn">Sports</button>
+            <!-- <button class="gallery-filter-btn">Technical</button>
+            <button class="gallery-filter-btn">Sports</button> -->
           </div>
 
           <!-- Creative Gallery Grid -->
