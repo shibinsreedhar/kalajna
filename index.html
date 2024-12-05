@@ -39,98 +39,35 @@
 
   <body class="bg-gray-900 font-sans">
     <!-- Navbar -->
-    <header class="bg-black px-6 py-4 shadow-md">
-      <div class="flex justify-between items-center container mx-auto">
-        <div class="text-2xl font-semibold headerbrand text-white">KALAJNA</div>
-        <nav class="hidden md:flex gap-8 items-center text-lg">
-          <a
-            href="#home"
-            class="text-white hover:text-blue-400 transition-colors duration-300"
-            >Home</a
-          >
-          <a
-            href="#about"
-            class="text-white hover:text-blue-400 transition-colors duration-300"
-            >About Us</a
-          >
-          <a
-            href="#events"
-            class="text-white hover:text-blue-400 transition-colors duration-300"
-            >Events</a
-          >
-          <a
-            href="#rules"
-            class="text-white hover:text-blue-400 transition-colors duration-300"
-            >Rules</a
-          >
-          <a
-            href="#registration"
-            class="text-white hover:text-blue-400 transition-colors duration-300"
-            >Registration</a
-          >
-          <a
-            href="#contact"
-            class="text-white hover:text-blue-400 transition-colors duration-300"
-            >Contact Us</a
-          >
-        </nav>
-        <!-- Mobile Menu Button -->
-        <button
-          id="menu-toggle"
-          class="md:hidden text-white focus:outline-none"
-        >
+    <header>
+      <div class="nav-container">
+        <a href="#home" class="headerbrand">KALAJNA</a>
+
+        <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            fill="none"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
+            fill="none"
             stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </button>
-      </div>
 
-      <!-- Mobile Dropdown Menu -->
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden flex-col gap-4 mt-4 w-full bg-black/95 backdrop-blur-sm"
-      >
-        <a
-          href="#home"
-          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
-          >Home</a
-        >
-        <a
-          href="#about"
-          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
-          >About Us</a
-        >
-        <a
-          href="#events"
-          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
-          >Events</a
-        >
-        <a
-          href="#rules"
-          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
-          >Rules</a
-        >
-        <a
-          href="#registration"
-          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
-          >Registration</a
-        >
-        <a
-          href="#contact"
-          class="text-white py-3 block w-full text-center hover:bg-blue-600/20 transition-colors duration-300"
-          >Contact Us</a
-        >
+        <nav>
+          <a href="#about">About</a>
+          <a href="#events">Events</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#register">Register</a>
+          <a href="#contact">Contact</a>
+        </nav>
       </div>
     </header>
 
@@ -572,244 +509,9 @@
             </div>
           </div>
 
-          <div id="modal-overlay-2" class="modal-overlay">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="text-3xl font-semibold text-gray-800">
-                  Harmony Extravaganza
-                </h2>
-                <span class="close-modal" onclick="closeModal(2)">×</span>
-              </div>
-              <div class="modal-body mt-4">
-                <img
-                  src="./assets/eventlogos/samplelogo.png"
-                  alt="Music Event"
-                  class="w-48 h-48 rounded-full mx-auto mb-4"
-                />
-                <p class="text-gray-600">
-                  A musical celebration that brings together diverse vocal and
-                  instrumental performances, blending Indian and Western styles
-                  into an unforgettable auditory experience.
-                </p>
-                <div class="mt-4">
-                  <h3 class="font-semibold text-gray-800">Event Details:</h3>
-                  <ul class="list-disc list-inside text-gray-600 mt-2">
-                    <li>Date: TBA</li>
-                    <li>Venue: Main Auditorium</li>
-                    <li>Team Size: Solo/Group</li>
-                    <li>Duration: 4-6 minutes</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="modal-footer mt-6 text-right">
-                <button
-                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-                  onclick="goToRegisterAndClose()"
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div id="modal-overlay-3" class="modal-overlay">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="text-3xl font-semibold text-gray-800">
-                  Epic Drama Dazzle
-                </h2>
-                <span class="close-modal" onclick="closeModal(3)">×</span>
-              </div>
-              <div class="modal-body mt-4">
-                <img
-                  src="./assets/eventlogos/samplelogo.png"
-                  alt="Drama Event"
-                  class="w-48 h-48 rounded-full mx-auto mb-4"
-                />
-                <p class="text-gray-600">
-                  A captivating theatrical showcase that blends powerful
-                  performances of street plays, mime, and monoacts, bringing
-                  forth raw emotion, activism, and storytelling to the stage.
-                </p>
-                <div class="mt-4">
-                  <h3 class="font-semibold text-gray-800">Event Details:</h3>
-                  <ul class="list-disc list-inside text-gray-600 mt-2">
-                    <li>Date: TBA</li>
-                    <li>Venue: Open Air Theatre</li>
-                    <li>Team Size: Varies by category</li>
-                    <li>Duration: 8-10 minutes</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="modal-footer mt-6 text-right">
-                <button
-                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-                  onclick="goToRegisterAndClose()"
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div id="modal-overlay-4" class="modal-overlay">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="text-3xl font-semibold text-gray-800">Fine Arts</h2>
-                <span class="close-modal" onclick="closeModal(4)">×</span>
-              </div>
-              <div class="modal-body mt-4">
-                <img
-                  src="./assets/eventlogos/samplelogo.png"
-                  alt="Fine Arts Event"
-                  class="w-48 h-48 rounded-full mx-auto mb-4"
-                />
-                <p class="text-gray-600">
-                  A celebration of creativity and artistic expression, featuring
-                  intricate mandalas, vibrant paintings, and imaginative designs
-                  that transform ordinary spaces into works of art.
-                </p>
-                <div class="mt-4">
-                  <h3 class="font-semibold text-gray-800">Categories:</h3>
-                  <ul class="list-disc list-inside text-gray-600 mt-2">
-                    <li>Mandala Art</li>
-                    <li>Face Painting</li>
-                    <li>Rangoli</li>
-                    <li>Creative Art</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="modal-footer mt-6 text-right">
-                <button
-                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-                  onclick="goToRegisterAndClose()"
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div id="modal-overlay-5" class="modal-overlay">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="text-3xl font-semibold text-gray-800">
-                  Lexicon Gala
-                </h2>
-                <span class="close-modal" onclick="closeModal(5)">×</span>
-              </div>
-              <div class="modal-body mt-4">
-                <img
-                  src="./assets/eventlogos/samplelogo.png"
-                  alt="Literary Event"
-                  class="w-48 h-48 rounded-full mx-auto mb-4"
-                />
-                <p class="text-gray-600">
-                  A celebration of linguistic creativity, where poets,
-                  wordsmiths, and literary enthusiasts come together to express
-                  themselves through the art of language.
-                </p>
-                <div class="mt-4">
-                  <h3 class="font-semibold text-gray-800">Categories:</h3>
-                  <ul class="list-disc list-inside text-gray-600 mt-2">
-                    <li>Poetry</li>
-                    <li>Creative Writing</li>
-                    <li>Storytelling</li>
-                    <li>Essay Writing</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="modal-footer mt-6 text-right">
-                <button
-                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-                  onclick="goToRegisterAndClose()"
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div id="modal-overlay-6" class="modal-overlay">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="text-3xl font-semibold text-gray-800">Quiz</h2>
-                <span class="close-modal" onclick="closeModal(6)">×</span>
-              </div>
-              <div class="modal-body mt-4">
-                <img
-                  src="./assets/eventlogos/samplelogo.png"
-                  alt="Quiz Event"
-                  class="w-48 h-48 rounded-full mx-auto mb-4"
-                />
-                <p class="text-gray-600">
-                  Engage in a battle of wits across various domains like
-                  science, history, economics, entertainment, and current
-                  affairs. Test your knowledge and challenge your intellectual
-                  limits.
-                </p>
-                <div class="mt-4">
-                  <h3 class="font-semibold text-gray-800">Event Details:</h3>
-                  <ul class="list-disc list-inside text-gray-600 mt-2">
-                    <li>Team Size: 2-3 members</li>
-                    <li>Multiple rounds</li>
-                    <li>Diverse topics</li>
-                    <li>Exciting prizes</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="modal-footer mt-6 text-right">
-                <button
-                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-                  onclick="goToRegisterAndClose()"
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div id="modal-overlay-7" class="modal-overlay">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h2 class="text-3xl font-semibold text-gray-800">
-                  More Fun Events
-                </h2>
-                <span class="close-modal" onclick="closeModal(7)">×</span>
-              </div>
-              <div class="modal-body mt-4">
-                <img
-                  src="./assets/eventlogos/samplelogo.png"
-                  alt="Fun Events"
-                  class="w-48 h-48 rounded-full mx-auto mb-4"
-                />
-                <p class="text-gray-600">
-                  A collection of exciting events to showcase various talents
-                  and have fun!
-                </p>
-                <div class="mt-4">
-                  <h3 class="font-semibold text-gray-800">Events Include:</h3>
-                  <ul class="list-disc list-inside text-gray-600 mt-2">
-                    <li>Antakshari</li>
-                    <li>Debate</li>
-                    <li>Cooking Without Fire</li>
-                    <li>Roadies</li>
-                    <li>Spotlight</li>
-                    <li>Ramp Walk</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="modal-footer mt-6 text-right">
-                <button
-                  class="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500 text-white px-6 py-2 rounded-lg text-lg font-semibold shadow-lg transform hover:scale-105 transition-all duration-300 ease-in-out"
-                  onclick="goToRegisterAndClose()"
-                >
-                  Register Now
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+      
+          
+      
       </section>
 
       <section
@@ -926,6 +628,123 @@
           </div>
         </div>
       </section>
+
+      <section
+        id="gallery"
+        class="relative py-16"
+        style="
+          background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('./assets/Kalajna 2024/IMG_9125.JPG');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        "
+      >
+        <div class="relative container mx-auto px-6 md:px-12 lg:px-20">
+          <div class="text-center mb-12">
+            <span class="text-blue-600 text-sm font-semibold tracking-wider uppercase mb-2 block">Our Memories</span>
+            <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+              Event <span class="text-blue-600">Gallery</span>
+            </h2>
+            <p class="text-white/80 mt-4 text-lg max-w-2xl mx-auto">
+              Explore the vibrant moments and unforgettable memories from our previous events
+            </p>
+          </div>
+
+          <!-- Gallery Filter Buttons -->
+          <div class="flex justify-center gap-4 mb-8 flex-wrap">
+            <button class="gallery-filter-btn active">All Photos</button>
+            <button class="gallery-filter-btn">Cultural</button>
+            <button class="gallery-filter-btn">Technical</button>
+            <button class="gallery-filter-btn">Sports</button>
+          </div>
+
+          <!-- Creative Gallery Grid -->
+          <div class="gallery-mosaic">
+            <!-- Gallery items will be dynamically inserted here -->
+          </div>
+        </div>
+      </section>
+
+      <section id="register" class="relative py-20 bg-gradient-to-b from-black via-blue-900/20 to-black">
+        <div class="absolute inset-0 bg-grid-white/[0.05] bg-[length:16px_16px]"></div>
+        
+        <div class="relative container mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Section Header -->
+          <div class="text-center mb-12">
+            <span class="text-blue-500 text-sm font-semibold tracking-wider uppercase mb-2 block">Join Us</span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+              Register for <span class="text-blue-500">KALAJNA 2024</span>
+            </h2>
+            <p class="text-white/80 mt-4 text-base sm:text-lg max-w-2xl mx-auto px-4">
+              Be part of the most anticipated technical and cultural fest. Register now to participate in exciting events!
+            </p>
+          </div>
+
+          <!-- Form Container -->
+          <div class="max-w-5xl mx-auto">
+            <div class="bg-white/5 backdrop-blur-lg rounded-2xl p-2 sm:p-4 shadow-2xl border border-white/10 hover:border-blue-500/30 transition-all duration-300">
+              <!-- Google Form iframe with increased height -->
+              <div class="w-full rounded-xl overflow-hidden" style="height: 80vh; min-height: 600px;">
+                <iframe 
+                  src="https://forms.gle/V8RRSo9vdWp6FAMz8"
+                  class="w-full h-full"
+                  frameborder="0" 
+                  marginheight="0" 
+                  marginwidth="0"
+                  loading="lazy"
+                  allow="fullscreen"
+                >
+                  Loading…
+                </iframe>
+              </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 text-center px-4">
+              <!-- Deadline Box -->
+              <div class="bg-white/5 backdrop-blur p-4 sm:p-6 rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-1">
+                <div class="text-blue-500 text-2xl mb-2">⏰</div>
+                <h3 class="text-white font-semibold mb-1">Registration Deadline</h3>
+                <p class="text-white/70 text-sm">March 31, 2024</p>
+              </div>
+
+              <!-- Guidelines Box -->
+              <div class="bg-white/5 backdrop-blur p-4 sm:p-6 rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-1 group">
+                <a href="./assets/file.pdf" 
+                   download 
+                   class="block outline-none focus:outline-none active:outline-none">
+                  <div class="text-blue-500 text-2xl mb-2 group-hover:scale-110 transition-transform">📝</div>
+                  <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Event Guidelines</h3>
+                  <p class="text-white/70 text-sm group-hover:text-white/90 transition-colors">Click to Download PDF</p>
+                </a>
+              </div>
+
+              <!-- Contact Box -->
+              <div class="bg-white/5 backdrop-blur p-4 sm:p-6 rounded-xl border border-white/10 hover:border-blue-500/30 transition-all duration-300 hover:-translate-y-1 group">
+                <a href="#contact" 
+                   class="block outline-none focus:outline-none active:outline-none">
+                  <div class="text-blue-500 text-2xl mb-2 group-hover:scale-110 transition-transform">💬</div>
+                  <h3 class="text-white font-semibold mb-1 group-hover:text-blue-400 transition-colors">Need Help?</h3>
+                  <p class="text-white/70 text-sm group-hover:text-white/90 transition-colors">Contact Support Team</p>
+                </a>
+              </div>
+            </div>
+
+            <!-- Mobile Notice -->
+            <div class="mt-6 text-center text-white/60 text-sm px-4">
+              <p>Having trouble viewing the form? 
+                <a href="https://forms.gle/V8RRSo9vdWp6FAMz8" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="text-blue-500 hover:text-blue-400 underline outline-none focus:outline-none">
+                  Open in new tab
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer id="contact" class="bg-gray-900 text-white py-12">
@@ -990,36 +809,152 @@
       </div>
     </footer>
 
+    <!-- Countdown Timer -->
+    <div
+      id="countdown-container"
+      class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50"
+    >
+      <div
+        class="bg-white/80 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border border-white/20"
+      >
+        <div class="flex items-center gap-3">
+          <div class="flex items-center">
+            <div class="text-center px-2">
+              <span id="days" class="text-lg font-bold text-gray-800">00</span>
+              <p class="text-[10px] font-medium text-gray-600">DAYS</p>
+            </div>
+            <span class="text-gray-400 font-bold">:</span>
+          </div>
+          <div class="flex items-center">
+            <div class="text-center px-2">
+              <span id="hours" class="text-lg font-bold text-gray-800">00</span>
+              <p class="text-[10px] font-medium text-gray-600">HRS</p>
+            </div>
+            <span class="text-gray-400 font-bold">:</span>
+          </div>
+          <div class="flex items-center">
+            <div class="text-center px-2">
+              <span id="minutes" class="text-lg font-bold text-gray-800"
+                >00</span
+              >
+              <p class="text-[10px] font-medium text-gray-600">MIN</p>
+            </div>
+            <span class="text-gray-400 font-bold">:</span>
+          </div>
+          <div class="text-center px-2">
+            <span id="seconds" class="text-lg font-bold text-gray-800">00</span>
+            <p class="text-[10px] font-medium text-gray-600">SEC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       // Function to open the modal
       function openModal(eventId) {
-        const modalOverlay = document.getElementById(
-          `modal-overlay-${eventId}`
-        );
+        const modalOverlay = document.getElementById(`modal-overlay-${eventId}`);
+        const header = document.querySelector('header');
+        const countdownContainer = document.getElementById('countdown-container');
+        
         if (modalOverlay) {
           modalOverlay.style.display = "flex";
-          document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+          document.body.classList.add('modal-open');
+          
+          // Hide header and countdown timer
+          if (header) {
+            header.style.opacity = '0';
+            header.style.visibility = 'hidden';
+          }
+          
+          if (countdownContainer) {
+            countdownContainer.classList.add('timerhide');
+          }
         }
       }
 
       // Function to close the modal
       function closeModal(eventId) {
-        const modalOverlay = document.getElementById(
-          `modal-overlay-${eventId}`
-        );
+        const modalOverlay = document.getElementById(`modal-overlay-${eventId}`);
+        const header = document.querySelector('header');
+        const countdownContainer = document.getElementById('countdown-container');
+        
         if (modalOverlay) {
           modalOverlay.style.display = "none";
-          document.body.style.overflow = "auto"; // Re-enable scrolling
+          document.body.classList.remove('modal-open');
+          
+          // Show header
+          if (header) {
+            header.style.opacity = '1';
+            header.style.visibility = 'visible';
+          }
+          
+          // Check footer visibility before showing timer
+          if (countdownContainer) {
+            const footer = document.querySelector('footer');
+            const footerRect = footer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (footerRect.top > windowHeight) {
+              countdownContainer.classList.remove('timerhide');
+            }
+          }
         }
       }
 
-      // Close modal when clicking outside
-      window.onclick = function (event) {
-        if (event.target.classList.contains("modal")) {
+      // Update the window.onclick handler
+      window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+          const header = document.querySelector('header');
+          const countdownContainer = document.getElementById('countdown-container');
+          
           event.target.style.display = "none";
-          document.body.style.overflow = "auto";
+          document.body.classList.remove('modal-open');
+          
+          if (header) {
+            header.style.opacity = '1';
+            header.style.visibility = 'visible';
+          }
+          
+          if (countdownContainer) {
+            const footer = document.querySelector('footer');
+            const footerRect = footer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (footerRect.top > windowHeight) {
+              countdownContainer.classList.remove('timerhide');
+            }
+          }
         }
       };
+
+      // Update the escape key handler
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          const header = document.querySelector('header');
+          const countdownContainer = document.getElementById('countdown-container');
+          const openModals = document.querySelectorAll('.modal[style*="display: flex"]');
+          
+          openModals.forEach(modal => {
+            modal.style.display = "none";
+            document.body.classList.remove('modal-open');
+          });
+          
+          if (header) {
+            header.style.opacity = '1';
+            header.style.visibility = 'visible';
+          }
+          
+          if (countdownContainer) {
+            const footer = document.querySelector('footer');
+            const footerRect = footer.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (footerRect.top > windowHeight) {
+              countdownContainer.classList.remove('timerhide');
+            }
+          }
+        }
+      });
 
       AOS.init({
         duration: 1000,
@@ -1027,9 +962,10 @@
         once: false,
         mirror: true,
       });
+
       document.addEventListener("DOMContentLoaded", function () {
         // Countdown Timer
-        const countDownDate = new Date("Dec 31, 2024 23:59:59").getTime();
+        const countDownDate = new Date("Dec 30, 2024 23:59:59").getTime();
         const countdownFunction = setInterval(function () {
           const now = new Date().getTime();
           const distance = countDownDate - now;
@@ -1055,115 +991,179 @@
           }
         }, 1000);
 
-        const menuToggle = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
+        const footer = document.querySelector("footer");
+        const countdownContainer = document.getElementById(
+          "countdown-container"
+        );
 
-        window.addEventListener("scroll", function () {
-          const footer = document.querySelector("footer");
-          const countdownContainer = document.getElementById(
-            "countdown-container"
-          );
+        function checkFooterVisibility() {
+          const footerRect = footer.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
 
-          const footerPosition = footer.getBoundingClientRect().top;
-
-          // If the footer is in view, hide the timer by adding 'timerhide' class
-          if (footerPosition <= window.innerHeight) {
+          if (footerRect.top <= windowHeight) {
             countdownContainer.classList.add("timerhide");
+          } else {
+            countdownContainer.classList.remove("timerhide");
           }
-        });
+        }
 
-        // Add an event listener to the menu toggle button
-        menuToggle.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-        });
+        window.addEventListener("scroll", checkFooterVisibility);
+        checkFooterVisibility(); // Initial check
       });
 
+      // Update goToRegisterAndClose function
       function goToRegisterAndClose() {
-        // Navigate to registration section
-        document
-          .getElementById("registration")
-          .scrollIntoView({ behavior: "smooth" });
-        // Close all modals
+        document.getElementById("registration").scrollIntoView({ behavior: "smooth" });
         document.querySelectorAll(".modal-overlay").forEach((modal) => {
           modal.style.display = "none";
         });
         document.body.style.overflow = "auto";
+        
+        // Check footer visibility before showing timer
+        const countdownContainer = document.getElementById("countdown-container");
+        const footer = document.querySelector("footer");
+        const footerRect = footer.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        if (footerRect.top > windowHeight) {
+          countdownContainer.classList.remove('timerhide');
+        }
       }
 
-      // Countdown Timer Script
-      const countdown = document.getElementById("countdown");
-      const eventDate = new Date("2023-12-31T23:59:59").getTime(); // Set your event date here
+      document.addEventListener("DOMContentLoaded", function() {
+        const galleryMosaic = document.querySelector(".gallery-mosaic");
+        const filterButtons = document.querySelectorAll(".gallery-filter-btn");
+        
+        // ============================================
+        // DEVELOPER: Add your images to these categories
+        // ============================================
+        const galleryImages = {
+          // All Photos
+          all: [
+            "IMG_9109.JPG",
+            "IMG_9125.JPG",
+            "IMG_9140.JPG",
+            "C0151T01.JPG",
+            "C0153T01.JPG",
+            "DSK03312.jpeg",
+            "IMG_1310.JPG",
+            "IMG_1662.JPG",
+            "IMG_1682.JPG",
+            // Add more images here...
+          ],
 
-      const updateCountdown = () => {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
+          // Cultural Events Images
+          cultural: [
+            "IMG_9109.JPG",
+            "IMG_9125.JPG",
+            "IMG_9140.JPG",
+            // Add more cultural event images here...
+          ],
 
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          // Technical Events Images
+          technical: [
+            "C0151T01.JPG",
+            "C0153T01.JPG",
+            "DSK03312.jpeg",
+            // Add more technical event images here...
+          ],
 
-        countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+          // Sports Events Images
+          sports: [
+            "IMG_1310.JPG",
+            "IMG_1662.JPG",
+            "IMG_1682.JPG",
+            // Add more sports event images here...
+          ]
+        };
 
-        if (distance < 0) {
-          clearInterval(interval);
-          countdown.innerHTML = "Event Started!";
+        // ============================================
+        // Core functionality - No need to modify below
+        // ============================================
+        
+        function createGalleryItems(category) {
+          galleryMosaic.innerHTML = '';
+          
+          // Use the appropriate array based on category
+          const imagesToShow = galleryImages[category] || galleryImages.all;
+          imagesToShow.forEach(createItem);
         }
-      };
 
-      const interval = setInterval(updateCountdown, 1000);
+        function createItem(filename) {
+          const galleryItem = document.createElement("div");
+          galleryItem.className = "gallery-item";
+          
+          galleryItem.innerHTML = `
+            <div class="content">
+              <img 
+                src="./assets/Kalajna 2024/${filename}" 
+                alt="Gallery Image" 
+                loading="lazy"
+              />
+              <div class="overlay">
+                <h3 class="text-lg font-semibold">KALAJNA 2024</h3>
+                <p class="text-sm text-white/80">Capturing moments that matter</p>
+              </div>
+            </div>
+          `;
+          
+          // Lightbox functionality
+          galleryItem.addEventListener('click', function() {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox-modal';
+            
+            lightbox.innerHTML = `
+              <div class="lightbox-content">
+                <img src="./assets/Kalajna 2024/${filename}" alt="Gallery Image" />
+                <div class="lightbox-close">&times;</div>
+              </div>
+            `;
+            
+            document.body.appendChild(lightbox);
+            lightbox.offsetHeight;
+            lightbox.classList.add('active');
+            
+            const closeModal = () => {
+              lightbox.classList.remove('active');
+              setTimeout(() => lightbox.remove(), 300);
+            };
+            
+            lightbox.querySelector('.lightbox-close').addEventListener('click', closeModal);
+            lightbox.addEventListener('click', function(e) {
+              if (e.target === lightbox) {
+                closeModal();
+              }
+            });
+            
+            document.addEventListener('keydown', function(e) {
+              if (e.key === 'Escape') {
+                closeModal();
+              }
+            });
+          });
+          
+          galleryMosaic.appendChild(galleryItem);
+        }
 
-      document.addEventListener("DOMContentLoaded", function () {
-        const header = document.querySelector("header");
-        const mobileMenuButton = document.querySelector(".mobile-menu-button");
-        const nav = document.querySelector("nav");
-        const scrollProgress = document.createElement("div");
-        scrollProgress.className = "scroll-progress";
-        header.appendChild(scrollProgress);
-
-        // Mobile menu toggle
-        mobileMenuButton.addEventListener("click", function () {
-          nav.classList.toggle("active");
-          document.body.classList.toggle("no-scroll");
-        });
-
-        // Close menu when clicking a link
-        const navLinks = document.querySelectorAll("nav a");
-        navLinks.forEach((link) => {
-          link.addEventListener("click", () => {
-            nav.classList.remove("active");
-            document.body.classList.remove("no-scroll");
+        // Filter button functionality
+        filterButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            const category = button.textContent.toLowerCase().trim();
+            const categoryKey = category === 'all photos' ? 'all' : category;
+            
+            galleryMosaic.style.opacity = '0';
+            setTimeout(() => {
+              createGalleryItems(categoryKey);
+              galleryMosaic.style.opacity = '1';
+            }, 300);
           });
         });
 
-        // Handle scroll events
-        window.addEventListener("scroll", () => {
-          // Add shadow on scroll
-          if (window.scrollY > 0) {
-            header.classList.add("scrolled");
-          } else {
-            header.classList.remove("scrolled");
-          }
-
-          // Update scroll progress
-          const winScroll =
-            document.body.scrollTop || document.documentElement.scrollTop;
-          const height =
-            document.documentElement.scrollHeight -
-            document.documentElement.clientHeight;
-          const scrolled = (winScroll / height) * 100;
-          scrollProgress.style.width = scrolled + "%";
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener("click", function (event) {
-          if (!event.target.closest("header")) {
-            nav.classList.remove("active");
-            document.body.classList.remove("no-scroll");
-          }
-        });
+        // Initialize gallery with all images
+        createGalleryItems('all');
       });
     </script>
   </body>
