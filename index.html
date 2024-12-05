@@ -1239,6 +1239,16 @@
             });
         });
 
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            const isClickInsideNav = nav.contains(event.target);
+            const isClickOnMenuBtn = mobileMenuBtn.contains(event.target);
+            
+            if (nav.classList.contains('active') && !isClickInsideNav && !isClickOnMenuBtn) {
+                nav.classList.remove('active');
+            }
+        });
+
         mobileMenuBtn.addEventListener('click', () => {
             nav.classList.toggle('active');
         });
