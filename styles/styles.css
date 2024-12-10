@@ -65,13 +65,13 @@ body {
 header {
   --rebecca-purple: hsl(270, 60%, 15%);
   background-image: linear-gradient(
-    to bottom right, 
-    hsla(203, 100%, 15%, 0.25), 
-    var(--rebecca-purple), 
+    to bottom right,
+    hsla(203, 100%, 15%, 0.25),
+    var(--rebecca-purple),
     hsla(28, 98%, 21%, 0.25)
   );
   background-color: var(--rebecca-purple);
-  padding: .5rem .5rem;
+  padding: 0.5rem 0.5rem;
   width: 100%;
   position: fixed;
   top: 0;
@@ -916,7 +916,6 @@ body.modal-open {
   opacity: 1;
 }
 
-
 .gallery-item:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -1119,4 +1118,206 @@ body.modal-open {
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.875rem;
+}
+
+/* Enhanced Modal Styles */
+.modal-body .sub-events {
+  margin-top: 1.5rem;
+}
+
+.collapse-button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(to right, #f8fafc, #f1f5f9);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.collapse-button:hover {
+  background: linear-gradient(to right, #f1f5f9, #e2e8f0);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.collapse-button .title {
+  font-weight: 600;
+  color: #1e40af;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.collapse-button .icon {
+  transition: transform 0.3s ease;
+}
+
+.collapse-button[aria-expanded="true"] .icon {
+  transform: rotate(180deg);
+}
+
+.collapse-content {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.collapse-content.active {
+  padding: 1.5rem;
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.criteria-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.criteria-item {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.criteria-item h4 {
+  color: #1e40af;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.criteria-item p {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+.collapse-button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(to right, #f8fafc, #f1f5f9);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.collapse-button:hover {
+  background: linear-gradient(to right, #f1f5f9, #e2e8f0);
+  transform: translateX(4px);
+}
+
+.collapse-button .icon {
+  transition: transform 0.3s ease;
+}
+
+.collapse-button[aria-expanded="true"] .icon {
+  transform: rotate(180deg);
+}
+
+.collapse-content {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.collapse-content.active {
+  padding: 1.5rem;
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prevent body scroll when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Coordinator Cards Styling */
+.coordinator-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.coordinator-card:hover {
+  transform: translateY(-10px);
+}
+
+.coordinator-card .relative {
+  overflow: hidden;
+}
+
+.coordinator-card img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.coordinator-card:hover img {
+  transform: scale(1.05);
+}
+
+.overlay-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.coordinator-card:hover .overlay-gradient {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .coordinator-card {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
