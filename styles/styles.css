@@ -63,8 +63,15 @@ body {
 
 /* Header & Navigation Styles */
 header {
-  background-color: rgba(0, 0, 0, 0.95);
-  padding: 1rem 1.5rem;
+  --rebecca-purple: hsl(270, 60%, 15%);
+  background-image: linear-gradient(
+    to bottom right, 
+    hsla(203, 100%, 15%, 0.25), 
+    var(--rebecca-purple), 
+    hsla(28, 98%, 21%, 0.25)
+  );
+  background-color: var(--rebecca-purple);
+  padding: .5rem .5rem;
   width: 100%;
   position: fixed;
   top: 0;
@@ -106,7 +113,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 2rem;
-  background-color: #000;
+  /* background-color: #000; */
 }
 
 nav a {
@@ -908,6 +915,7 @@ body.modal-open {
 .gallery-item:hover .overlay {
   opacity: 1;
 }
+
 
 .gallery-item:hover {
   transform: translateY(-4px);
