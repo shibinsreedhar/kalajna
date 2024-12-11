@@ -729,6 +729,36 @@ nav a:active {
   outline: none;
   box-shadow: none; /* Remove any box shadow */
 }
+.headerbrand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000; /* Adjust as needed */
+}
+
+.header-logo {
+  width: 40px; /* Adjust logo size as needed */
+  height: 40px;
+  margin-right: 10px;
+}
+.title{
+  height: 45px;;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text .tagline {
+  font-size: 0.9rem;
+  color: #dad9d9; 
+  margin-top: 1px;
+  font-style: italic; 
+  text-transform: uppercase;
+}
+
+
 
 /* Countdown Timer Styles */
 #countdown-container {
