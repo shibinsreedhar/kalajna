@@ -59,6 +59,16 @@
 
   <!-- Main Content with Video Background -->
   <main>
+    <!-- Arrow Button -->
+    <div class="arrow-button" id="arrowButton">
+      &#x25C1;
+    </div>
+
+    <!-- Fixed Register Now Button -->
+    <a href="https://docs.google.com/forms/d/1Wk1yk1o8ojxpGWQ-emMTFkmRVFyBzb77Q46mIvXBnkY/edit?pli=1"
+      class="fixed-register-button" id="registerButton" target="_blank">
+      Register Now
+    </a>
     <!-- Hero Section with Countdown Timer -->
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
       <!-- Video Background -->
@@ -3900,6 +3910,38 @@
       // Scroll to register section
       document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
     }
+
+  </script>
+  <script>
+    let isRegisterButtonVisible = false; // Track the visibility state
+
+    document.getElementById('arrowButton').addEventListener('click', function () {
+      const registerButton = document.getElementById('registerButton');
+      const arrowButton = document.getElementById('arrowButton');
+
+      if (!isRegisterButtonVisible) {
+        // Animate the arrow button
+        arrowButton.style.transform = 'translateY(-50%) rotate(180deg)'; // Rotate the arrow
+        arrowButton.style.transition = 'transform 0.3s ease'; // Smooth transition
+
+        // Show the Register Now button after a short delay
+        setTimeout(() => {
+          arrowButton.style.display = 'none'; // Hide the arrow button
+          registerButton.classList.add('visible'); // Show the Register Now button
+          isRegisterButtonVisible = true; // Update the state
+
+          // Automatically hide the Register Now button after 5 seconds
+          setTimeout(() => {
+            // Reverse animation for hiding
+            registerButton.classList.remove('visible'); // Hide the Register Now button
+            arrowButton.style.display = 'flex'; // Show the arrow button again
+            arrowButton.style.transform = 'translateY(-50%) rotate(0deg)'; // Reset rotation
+            arrowButton.style.transition = 'transform 0.3s ease'; // Smooth transition
+            isRegisterButtonVisible = false; // Update the state
+          }, 5000); // Change this value to adjust the duration
+        }, 300); // Match the duration of the rotation animation
+      }
+    });
   </script>
 
 

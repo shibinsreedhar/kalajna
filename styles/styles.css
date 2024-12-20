@@ -79,7 +79,49 @@ header {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+.arrow-button {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  right: 20px; /* Distance from the right */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  background-color: #1D4ED8; /* Tailwind blue-600 */
+  color: white;
+  width: 50px; /* Width of the arrow button */
+  height: 50px; /* Height of the arrow button */
+  border-radius: 50%; /* Make it circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it is above other content */
+  transition: background-color 0.3s, transform 0.3s; /* Add transition for animation */
+}
 
+.arrow-button:hover {
+  background-color: #2563EB; /* Tailwind blue-700 */
+}
+
+.fixed-register-button {
+  position: fixed;
+  top: 50%; /* Center vertically */
+  right: 20px; /* Distance from the right */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  background-color: #1D4ED8; /* Tailwind blue-600 */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it is above other content */
+  display: none; /* Initially hidden */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.fixed-register-button.visible {
+  display: block; /* Show when visible */
+}
 .nav-container {
   max-width: 1400px;
   margin: 0 auto;
